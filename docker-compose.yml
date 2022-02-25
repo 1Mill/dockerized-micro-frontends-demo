@@ -1,0 +1,58 @@
+version: '3'
+
+services:
+  container:
+    depends_on:
+      - browse
+      - content
+      - restaurant-order
+    image: node:16-alpine
+    command: npm run start
+    environment:
+      HOST: 0.0.0.0
+      NODE_ENV: development
+      PORT: 8080
+    ports:
+      - 5000:8080
+    volumes:
+      - ./container:/app
+    working_dir: /app
+
+  browse:
+    image: node:16-alpine
+    command: npm run start
+    environment:
+      HOST: 0.0.0.0
+      NODE_ENV: development
+      PORT: 8080
+    ports:
+      - 5001:8080
+    volumes:
+      - ./browse:/app
+    working_dir: /app
+
+  content:
+    image: node:16-alpine
+    command: npm run start
+    environment:
+      HOST: 0.0.0.0
+      NODE_ENV: development
+      PORT: 8080
+    ports:
+      - 5002:8080
+    volumes:
+      - ./content:/app
+    working_dir: /app
+
+  restaurant-order:
+    image: node:16-alpine
+    command: npm run start
+    environment:
+      HOST: 0.0.0.0
+      NODE_ENV: development
+      PORT: 8080
+    ports:
+      - 5003:8080
+    volumes:
+      - ./restaurant-order:/app
+    working_dir: /app
