@@ -7,6 +7,6 @@
 [submodule "content"]
 	path = content
 	url = https://github.com/micro-frontends-demo/content
-[submodule "resturant-order"]
-	path = resturant-order
+[submodule "restaurant-order"]
+	path = restaurant-order
 	url = https://github.com/micro-frontends-demo/restaurant-order
