@@ -31,7 +31,7 @@ services:
 
   content:
     image: node:16-alpine
-    command: npm run start
+    command: sh -c "npm run build && npm run start"
     environment:
       HOST: 0.0.0.0
       NODE_ENV: development
