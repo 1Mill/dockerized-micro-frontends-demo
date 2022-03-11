@@ -11,9 +11,8 @@ services:
     environment:
       HOST: 0.0.0.0
       NODE_ENV: development
-      PORT: 8080
     ports:
-      - 5000:8080
+      - 3000:3000
     volumes:
       - ./container:/app
     working_dir: /app
@@ -24,9 +23,8 @@ services:
     environment:
       HOST: 0.0.0.0
       NODE_ENV: development
-      PORT: 8080
     ports:
-      - 5001:8080
+      - 3001:3001
     volumes:
       - ./browse:/app
     working_dir: /app
@@ -37,9 +35,8 @@ services:
     environment:
       HOST: 0.0.0.0
       NODE_ENV: development
-      PORT: 8080
     ports:
-      - 5002:8080
+      - 5000:5000
     volumes:
       - ./content:/app
     working_dir: /app
@@ -50,9 +47,8 @@ services:
     environment:
       HOST: 0.0.0.0
       NODE_ENV: development
-      PORT: 8080
     ports:
-      - 5003:8080
+      - 3002:3002
     volumes:
       - ./restaurant-order:/app
     working_dir: /app
